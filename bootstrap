@@ -8,6 +8,7 @@ chmod 600 $HOME/.ssh/id_ed25519
 
 echo "Test SSH connection..."
 ssh -T git@github.com
+echo $?
 if [ $? -le 1 ]
 then
    echo "Cloning Settings/dotfiles repo..."
