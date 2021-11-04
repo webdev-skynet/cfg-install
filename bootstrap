@@ -7,13 +7,14 @@ chmod 600 $HOME/.ssh/config
 chmod 600 $HOME/.ssh/id_ed25519
 
 echo "Test SSH connection..."
-if $(ssh -T git@github.com)
+ssh -T git@github.com
+if [ $? -le 1 ]
 then
-	echo "Cloning Settings/dotfiles repo..."
+   echo "Cloning Settings/dotfiles repo..."
+   git clone --bare git@github.com:webdev-skynet/osx-settings-dotfiles.git $HOME/.myconfig
 fi
 
-git clone --bare git@github.com:webdev-skynet/osx-settings-dotfiles.git $HOME/.myconfig
-
+# Checkout
 function cfg {
    /usr/bin/git --git-dir=$HOME/.myconfig/ --work-tree=$HOME $@
 }
