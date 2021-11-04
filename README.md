@@ -12,4 +12,4 @@ bootstrapper for installing dotfiles and setup scripts
   ```
 3. Then `source .zshrc` to initialize last config and git user info setting routine from `.private`*  and do the setup
 
-** * file on secret place **
+* file on secret place
