@@ -9,8 +9,7 @@ Download command line developer tools (before using a git command to clone the d
   `$ softwareupdate --all --install --force `  
 3. Transfer to a file this simple script with `curl` to automatize first-step setup to clone the settings/dotfiles repo on any new machine
   ```bash
-  touch bootstrap
-  curl -Lks https://raw.githubusercontent.com/webdev-skynet/cfg-install/main/bootstrap > bootstrap
+  curl -O -L https://raw.githubusercontent.com/webdev-skynet/cfg-install/main/bootstrap
   chmod 755 bootstrap
   ./bootstrap
   ```
